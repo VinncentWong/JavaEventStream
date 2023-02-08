@@ -13,7 +13,7 @@ public class BasicProducer {
     public static void main(String[] args) throws InterruptedException{
         final String topic = "topic1";
         final Map<String, Object> configuration = Map.of(
-                ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9002", // lokasi broker
+                ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092", // lokasi broker
                 ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName(),
                 ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName(),
                 ProducerConfig.ENABLE_IDEMPOTENCE_CONFIG, true // memastikan tidak ada duplikasi atau out-of-order record
